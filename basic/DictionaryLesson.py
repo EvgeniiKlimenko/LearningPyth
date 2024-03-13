@@ -1,3 +1,4 @@
+from copy import deepcopy
 
 person = {
     "name": "John",
@@ -56,3 +57,10 @@ additional_info = {
 # concatenate two dicts
 one_person.update(additional_info)  # second one overwrites values (by the same keys) of the first.
 print(one_person)
+
+# copy a dict to create an independent copy of dict
+#copied_dict = additional_info.copy()  # will NOT work with mutable objects inside a dict, list, set for example
+copied_dict = deepcopy(additional_info)  # better to use copy.deepcopy
+copied_dict["job"] = "Pilot"
+print("Dictionary original: ", additional_info)
+print("Copy is: ", copied_dict)
