@@ -16,7 +16,7 @@ class Character:
 
 
 class Ork(Character):  # extending the base class
-    base_health = 120
+    base_health = 120   # to add attribute to a class
     base_power = 20
     name = "Ork"
 
